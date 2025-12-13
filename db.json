@@ -1,0 +1,36 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "name": "Prod-DB-1",
+      "status": "up",
+      "cpu": 74,
+      "memory": 63
+    },
+    {
+      "id": 2,
+      "name": "Staging-DB-2",
+      "status": "down",
+      "cpu": 0,
+      "memory": 0
+    },
+    {
+      "id": 3,
+      "name": "Analytics-DB-1F",
+      "status": "up",
+      "cpu": 83,
+      "memory": 68
+    }
+  ],
+  "servers-metrics": [
+    {
+      "id": 1,
+      "serverId": 1,
+      "metrics": [
+        { "hour": 0, "cpu": 65 },
+        { "hour": 1, "cpu": 67 },
+        { "hour": 2, "cpu": 70 }
+      ]
+    }
+  ]
+}

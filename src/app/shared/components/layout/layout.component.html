@@ -1,0 +1,29 @@
+<nz-layout class="h-auto !min-h-screen">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="h-[32px] m-4 text-white font-semibold">Loginix Practical</div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/servers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        [nzMatchRouterExact]="true" [nzMatchRouter]="true">
+        <nz-icon nzType="database" nzTheme="outline" />
+        <span>SERVER LIST</span>
+      </li>
+      <li nz-menu-item>
+        <nz-icon nzType="file" />
+        <span>File</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header class="!bg-white !p-0">
+      <nz-icon class="text-lg px-6 cursor-pointer transition-colors hover:text-[#1890ff]"
+        [nzType]="isCollapsed() ? 'menu-unfold' : 'menu-fold'" nzTheme="outline"
+        (click)="isCollapsed.set(!isCollapsed())" />
+    </nz-header>
+    <nz-content class="!mx-4">
+      <div class="!mt-4 p-6 bg-white h-full">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer class="text-center">Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>

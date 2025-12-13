@@ -1,0 +1,62 @@
+<nz-page-header [nzGhost]="false" class="!p-0">
+  <nz-page-header-title>Servers</nz-page-header-title>
+</nz-page-header>
+<form nz-form class="w-full flex gap-4 items-center !my-4" [formGroup]="filterForm">
+  <div class="font-semibold">
+    <nz-icon nzType="filter" nzTheme="outline" />
+  </div>
+  <nz-form-item class="w-40 !m-0">
+    <nz-form-label nzFor="status">Staus</nz-form-label>
+    <nz-form-control>
+      <nz-select formControlName="status">
+        <nz-option nzLabel="All" nzValue=""></nz-option>
+        <nz-option nzLabel="Up" nzValue="up"></nz-option>
+        <nz-option nzLabel="Down" nzValue="down"></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item class="w-60 !m-0">
+    <nz-form-label nzFor="cpu">CPU</nz-form-label>
+    <nz-form-control>
+      <nz-row nzGutter="8">
+        <nz-col nzSpan="12">
+          <nz-slider formControlName="cpu"></nz-slider>
+        </nz-col>
+        <div nz-col nzSpan="4">
+          <nz-input-number [nzStep]="1" [ngModel]="filterForm.get('cpu')?.value"
+            (ngModelChange)="filterForm.patchValue({ cpu: $event })"
+            [ngModelOptions]="{standalone: true}"></nz-input-number>
+        </div>
+      </nz-row>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button nzType="primary" (click)="resetForm()">
+    <nz-icon nzType="reload" nzTheme="outline" /> Reset Filters
+  </button>
+</form>
+<nz-table #basicTable [nzData]="serverList" class="page-table" [nzLoading]="isLoading()" [nzShowPagination]="false">
+  <thead>
+    <tr>
+      <th>Server Name</th>
+      <th>Status</th>
+      <th>CPU usage (%)</th>
+      <th>Memory usage (%)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(server of basicTable.data; track server.id){
+    <tr>
+      <td>{{server.name}}</td>
+      <td>{{server.status}}</td>
+      <td>{{server.cpu}}</td>
+      <td>{{server.memory}}</td>
+      <td>
+        <a nz-button nzType="link" (click)="viewDetailedMetrics(server)">
+          <nz-icon nzType="fund-view" nzTheme="outline" />View Details
+        </a>
+      </td>
+    </tr>
+    }
+  </tbody>
+</nz-table>

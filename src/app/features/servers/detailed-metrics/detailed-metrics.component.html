@@ -1,0 +1,55 @@
+<nz-spin [nzSpinning]="isLoading()">
+  <nz-page-header [nzGhost]="false" nzBackIcon="arrow-left" (nzBack)="goBack()" class="!p-0">
+    <nz-page-header-title>Detailed Metrics</nz-page-header-title>
+    <nz-page-header-subtitle>Server : {{ serverDetails.name | titlecase }}</nz-page-header-subtitle>
+    <nz-page-header-extra>
+      <nz-space>
+        <button *nzSpaceItem nz-button nzType="default" (click)="goBack()">
+          <nz-icon nzType="arrow-left" nzTheme="outline" />Back
+        </button>
+      </nz-space>
+    </nz-page-header-extra>
+    <nz-page-header-content>
+      <nz-descriptions nzSize="small" [nzColumn]="3">
+        <nz-descriptions-item nzTitle="Status" [nzSpan]="1">
+          <strong>{{ serverDetails.status | titlecase }}</strong>
+        </nz-descriptions-item>
+        <nz-descriptions-item nzTitle="CPU usage (%)" [nzSpan]="1">
+          <strong>{{ serverDetails.cpu }}</strong>
+        </nz-descriptions-item>
+        <nz-descriptions-item nzTitle="Memory usage (%)" [nzSpan]="1">
+          <strong>{{ serverDetails.memory }}</strong>
+        </nz-descriptions-item>
+      </nz-descriptions>
+    </nz-page-header-content>
+  </nz-page-header>
+
+  <div id="chart" #chart class="border p-2 shadow-sm mt-4">
+    <div class="flex gap-4 mb-4">
+      <div class="bg-white border border-dashed p-4 flex-1 text-center shadow-sm">
+        <h3 class="text-base text-[#666]">Average CPU</h3>
+        <div class="text-lg font-bold text-[#333]">{{ averageCPU || 'N/A' }}</div>
+        <span class="text-sm text-[#999]"></span>
+      </div>
+      <div class="bg-white border border-dashed p-4 flex-1 text-center shadow-sm bg-red-50">
+        <h3 class="text-base text-[#666]">Highest CPU Spike</h3>
+        <div class="text-lg font-bold text-[#333]">CPU : {{ highestCpuSpike.cpu || 'N/A' }}</div>
+        <span class="text-sm text-[#999]">Hour : {{ highestCpuSpike.hour || 'N/A' }}</span>
+      </div>
+      <div class="bg-white border border-dashed p-4 flex-1 text-center shadow-sm bg-green-50">
+        <h3 class="text-base text-[#666]">Lowest CPU Dip</h3>
+        <div class="text-lg font-bold text-[#333]">CPU : {{ lowestCpuDip.cpu || 'N/A' }}</div>
+        <span class="text-sm text-[#999]">Hour : {{ lowestCpuDip.hour || 'N/A' }}</span>
+      </div>
+    </div>
+
+    @if(detailedMetric.serverId){
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+      [dataLabels]="chartOptions.dataLabels" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
+      [title]="chartOptions.title"></apx-chart>
+    }@else {
+    <nz-result nzStatus="404" nzTitle="404" nzSubTitle="Sorry, detailed metrics for this server not found."
+      class="w-max m-auto"></nz-result>
+    }
+  </div>
+</nz-spin>

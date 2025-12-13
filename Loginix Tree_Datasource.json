@@ -1,0 +1,242 @@
+[
+  {
+    "company": "AmirAA",
+    "server_group": "Group 0",
+    "server_name": "AMASRV01",
+    "server_errors_count": 2,
+    "instance_name": "AMASRV01\\MAIN",
+    "database_name": "master"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Group 0",
+    "server_name": "AMASRV01",
+    "server_errors_count": 2,
+    "instance_name": "AMASRV01\\MAIN",
+    "database_name": "tempdb"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Group 0",
+    "server_name": "AMASRV01",
+    "server_errors_count": 2,
+    "instance_name": "AMASRV01\\MAIN",
+    "database_name": "SalesDB"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Group 0",
+    "server_name": "AMASRV02",
+    "server_errors_count": 0,
+    "instance_name": "AMASRV02\\MAIN",
+    "database_name": "Inventory"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Group 0",
+    "server_name": "AMASRV02",
+    "server_errors_count": 0,
+    "instance_name": "AMASRV02\\MAIN",
+    "database_name": "Accounts"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Analytics Group",
+    "server_name": "ANALYTICS-SRV",
+    "server_errors_count": 5,
+    "instance_name": "ANALYTICS\\ML",
+    "database_name": "ModelStore"
+  },
+  {
+    "company": "AmirAA",
+    "server_group": "Analytics Group",
+    "server_name": "ANALYTICS-SRV",
+    "server_errors_count": 5,
+    "instance_name": "ANALYTICS\\ML",
+    "database_name": "FeatureDB"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "Default Servers Group - 0",
+    "server_name": "DESKTOP-12V00A0\\SQLSERVER2016",
+    "server_errors_count": 0,
+    "instance_name": "SQLSERVER2016",
+    "database_name": "tempdb"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "Default Servers Group - 0",
+    "server_name": "DESKTOP-12V00A0\\SQLSERVER2016",
+    "server_errors_count": 0,
+    "instance_name": "SQLSERVER2016",
+    "database_name": "model"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "Default Servers Group - 0",
+    "server_name": "DESKTOP-12V00A0\\SQLSERVER2016",
+    "server_errors_count": 0,
+    "instance_name": "SQLSERVER2016",
+    "database_name": "UserDB"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "aviavi-Group-B",
+    "server_name": "AVI-SRV-B1",
+    "server_errors_count": 3,
+    "instance_name": "AVISQL01",
+    "database_name": "CustomerDB"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "aviavi-Group-B",
+    "server_name": "AVI-SRV-B1",
+    "server_errors_count": 3,
+    "instance_name": "AVISQL01",
+    "database_name": "Billing"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "aviavi-Group-B",
+    "server_name": "AVI-SRV-B2",
+    "server_errors_count": 0,
+    "instance_name": "AVISQL02",
+    "database_name": "Logs"
+  },
+  {
+    "company": "aviavi",
+    "server_group": "aviavi-Group-B",
+    "server_name": "AVI-SRV-B2",
+    "server_errors_count": 0,
+    "instance_name": "AVISQL02",
+    "database_name": "Metrics"
+  },
+  {
+    "company": "aviDvlp",
+    "server_group": "Group A",
+    "server_name": "DEVSRV01",
+    "server_errors_count": 1,
+    "instance_name": "DEV01",
+    "database_name": "ProjectX"
+  },
+  {
+    "company": "aviDvlp",
+    "server_group": "Group A",
+    "server_name": "DEVSRV01",
+    "server_errors_count": 1,
+    "instance_name": "DEV01",
+    "database_name": "TestDB"
+  },
+  {
+    "company": "aviDvlp",
+    "server_group": "Group A",
+    "server_name": "DEVSRV01",
+    "server_errors_count": 1,
+    "instance_name": "DEV01",
+    "database_name": "QAResults"
+  },
+  {
+    "company": "aviDvlp",
+    "server_group": "Group B",
+    "server_name": "DEVSRV02",
+    "server_errors_count": 0,
+    "instance_name": "DEV02",
+    "database_name": "Scratch"
+  },
+  {
+    "company": "aviDvlp",
+    "server_group": "Group B",
+    "server_name": "DEVSRV02",
+    "server_errors_count": 0,
+    "instance_name": "DEV02",
+    "database_name": "DevOpsDB"
+  },
+  {
+    "company": "dba-qa-test",
+    "server_group": "QA Group 1",
+    "server_name": "QASRV01",
+    "server_errors_count": 0,
+    "instance_name": "QAINSTANCE",
+    "database_name": "QA_DB1"
+  },
+  {
+    "company": "dba-qa-test",
+    "server_group": "QA Group 1",
+    "server_name": "QASRV01",
+    "server_errors_count": 0,
+    "instance_name": "QAINSTANCE",
+    "database_name": "QA_DB2"
+  },
+  {
+    "company": "dba-qa-test",
+    "server_group": "QA Group 2",
+    "server_name": "QASRV02",
+    "server_errors_count": 2,
+    "instance_name": "QAINSTANCE2",
+    "database_name": "QA_Audit"
+  },
+  {
+    "company": "dba-qa-test",
+    "server_group": "QA Group 2",
+    "server_name": "QASRV02",
+    "server_errors_count": 2,
+    "instance_name": "QAINSTANCE2",
+    "database_name": "QA_Analytics"
+  },
+  {
+    "company": "TechOps",
+    "server_group": "Ops Group 1",
+    "server_name": "OPS-SERVER-01",
+    "server_errors_count": 4,
+    "instance_name": "OPS01",
+    "database_name": "OpsCore"
+  },
+  {
+    "company": "TechOps",
+    "server_group": "Ops Group 1",
+    "server_name": "OPS-SERVER-01",
+    "server_errors_count": 4,
+    "instance_name": "OPS01",
+    "database_name": "OpsLog"
+  },
+  {
+    "company": "CloudTeam",
+    "server_group": "Cloud Group Alpha",
+    "server_name": "CLOUD-SRV-01",
+    "server_errors_count": 0,
+    "instance_name": "AZURESQL01",
+    "database_name": "CloudDB"
+  },
+  {
+    "company": "CloudTeam",
+    "server_group": "Cloud Group Alpha",
+    "server_name": "CLOUD-SRV-01",
+    "server_errors_count": 0,
+    "instance_name": "AZURESQL01",
+    "database_name": "Sessions"
+  },
+  {
+    "company": "CloudTeam",
+    "server_group": "Cloud Group Alpha",
+    "server_name": "CLOUD-SRV-01",
+    "server_errors_count": 0,
+    "instance_name": "AZURESQL01",
+    "database_name": "Telemetry"
+  },
+  {
+    "company": "CloudTeam",
+    "server_group": "Cloud Group Beta",
+    "server_name": "CLOUD-SRV-02",
+    "server_errors_count": 2,
+    "instance_name": "AZURESQL02",
+    "database_name": "BackupDB"
+  },
+  {
+    "company": "CloudTeam",
+    "server_group": "Cloud Group Beta",
+    "server_name": "CLOUD-SRV-02",
+    "server_errors_count": 2,
+    "instance_name": "AZURESQL02",
+    "database_name": "Config"
+  }
+]
