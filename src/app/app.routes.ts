@@ -9,6 +9,10 @@ export const routes: Routes = [
       {
         path: 'servers',
         loadChildren: () => import('./features/servers/servers.routes').then(m => m.SERVERS_ROUTES)
+      },
+      {
+        path: 'tree-view',
+        loadChildren: () => import('./features/parent-sibling-wrapper/tree-view.routes').then(m => m.TREE_VIEW_ROUTES)
       }
     ]
   }

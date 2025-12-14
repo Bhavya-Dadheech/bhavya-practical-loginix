@@ -7,9 +7,10 @@
         <nz-icon nzType="database" nzTheme="outline" />
         <span>SERVER LIST</span>
       </li>
-      <li nz-menu-item>
-        <nz-icon nzType="file" />
-        <span>File</span>
+      <li nz-menu-item routerLink="/tree-view" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        [nzMatchRouterExact]="true" [nzMatchRouter]="true">
+        <nz-icon nzType="apartment" nzTheme="outline" />
+        <span>Tree Structure</span>
       </li>
     </ul>
   </nz-sider>

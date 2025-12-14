@@ -113,13 +113,16 @@ export class DetailedMetricsComponent implements OnInit {
       )
       .subscribe({
         next: (res: any) => {
-          this.detailedMetric = res;
+          const response = res;
+          if (response && Array.isArray(response) && response.length > 0) {
+            this.detailedMetric = response[0];
 
-          if (this.detailedMetric && Array.isArray(this.detailedMetric.metrics)) {
-            this.cpuValues = this.detailedMetric.metrics.map(m => m.cpu);
-            this.hourLabels = this.detailedMetric.metrics.map(m => m.hour);
-            this.constructChart();
-            this.calculateStatistics(this.detailedMetric.metrics);
+            if (this.detailedMetric && this.detailedMetric.serverId === Number(this.serverId)) {
+              this.cpuValues = this.detailedMetric.metrics.map(m => m.cpu);
+              this.hourLabels = this.detailedMetric.metrics.map(m => m.hour);
+              this.constructChart();
+              this.calculateStatistics(this.detailedMetric.metrics);
+            }
           }
         },
         error: err => {

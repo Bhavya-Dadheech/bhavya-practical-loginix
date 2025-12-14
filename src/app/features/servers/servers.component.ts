@@ -37,14 +37,21 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
     this.fetchServers();
 
-    this.filterForm.get('status')?.valueChanges.subscribe(value => {
-      this.options.status = value;
-      this.fetchServers();
-    });
-    this.filterForm.get('cpu')?.valueChanges
+    // this.filterForm.get('status')?.valueChanges.subscribe(value => {
+    //   this.options.status = value;
+    //   this.fetchServers();
+    // });
+    // this.filterForm.get('cpu')?.valueChanges
+    //   .pipe(debounceTime(500), distinctUntilChanged())
+    //   .subscribe((value) => {
+    //     this.options.cpu = value;
+    //     this.fetchServers();
+    //   });
+
+    this.filterForm.valueChanges
       .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe((value) => {
-        this.options.cpu = value;
+        this.options = value;
         this.fetchServers();
       })
   }

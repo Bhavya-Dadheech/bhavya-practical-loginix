@@ -26,9 +26,8 @@ export class ServersService {
   }
 
   getDetailedMetrics(serverId: number): Observable<ServerMetrics> {
-    // const params = new HttpParams();
-    // params.set('serverId', serverId);
-    // return this.http.get<ServerMetrics>(`${environment.apiUrl}/servers/${serverId}/metrics`, { params });
-    return this.http.get<ServerMetrics>(`${environment.apiUrl}/servers-metrics/${serverId}`);
+    let params = new HttpParams();
+    if (this.isValid(serverId)) params = params.set('serverId', serverId);
+    return this.http.get<ServerMetrics>(`${environment.apiUrl}/servers-metrics`, { params });
   }
 }

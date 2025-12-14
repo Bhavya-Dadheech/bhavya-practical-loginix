@@ -17,10 +17,13 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzTreeModule } from 'ng-zorro-antd/tree';
+import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 
 export const SharedModules = [
   FormsModule,
   NzFormModule,
+  NzTreeModule,
   CommonModule,
   NzIconModule,
   NzMenuModule,
@@ -33,6 +36,7 @@ export const SharedModules = [
   NzResultModule,
   NzButtonModule,
   NzDividerModule,
+  NzTreeViewModule,
   NgApexchartsModule,
   NzPageHeaderModule,
   ReactiveFormsModule,

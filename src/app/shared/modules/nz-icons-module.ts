@@ -1,6 +1,6 @@
 import {
   MenuFoldOutline, MenuUnfoldOutline, UserOutline, TeamOutline, DatabaseOutline,
-  FundViewOutline, ArrowLeftOutline, ReloadOutline, FilterOutline
+  FundViewOutline, ArrowLeftOutline, ReloadOutline, FilterOutline, ApartmentOutline
 } from '@ant-design/icons-angular/icons';
 
 export const ICONS = [
@@ -12,5 +12,6 @@ export const ICONS = [
   DatabaseOutline,
   MenuFoldOutline,
   ArrowLeftOutline,
+  ApartmentOutline,
   MenuUnfoldOutline,
 ]
